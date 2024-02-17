@@ -1,7 +1,8 @@
 import axios from "axios";
+import { BACKEND_API } from "./config";
 
-const api = axios.create({
-  baseURL: process.env.REACT_APP_BACKEND_API,
+const apiService = axios.create({
+  baseURL: BACKEND_API,
   headers: {
     "Content-Type": "application/json",
   },
@@ -10,7 +11,7 @@ const api = axios.create({
 /**
  * console.log all requests and responses
  */
-api.interceptors.request.use(
+apiService.interceptors.request.use(
   (request) => {
     console.log("Starting Request", request);
     return request;
@@ -20,7 +21,7 @@ api.interceptors.request.use(
   }
 );
 
-api.interceptors.response.use(
+apiService.interceptors.response.use(
   (response) => {
     console.log("Response:", response);
     return response;
@@ -32,4 +33,4 @@ api.interceptors.response.use(
   }
 );
 
-export default api;
+export default apiService;

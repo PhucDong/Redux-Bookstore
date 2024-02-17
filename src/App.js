@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<PublicLayout />}>
             <Route index element={<HomePage />} />
             <Route path="books/:id" element={<BookDetailPage />} />
-            <Route path="reading" element={<ReadingPage />} />
+            <Route path="reading-list" element={<ReadingPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
