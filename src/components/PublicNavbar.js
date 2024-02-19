@@ -72,7 +72,7 @@ const PublicNavbar = () => {
                 key="reading"
                 onClick={handleCloseNavMenu}
                 component={NavLink}
-                to="/reading"
+                to="/reading-list"
               >
                 <Typography textAlign="center">Reading List</Typography>
               </MenuItem>
